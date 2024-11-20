@@ -1,0 +1,315 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);*/
+}
+
+.logo img{
+  height: 50px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.navbar{
+    font: 1.1em sans-serif;
+    background-color: transparent;
+    /*background-color: rgb(23, 209, 163);/*rgb(243, 251, 249)*/
+    padding: 8px;
+    position: relative;
+    top: -50px;
+    opacity: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    animation: slideDown 1.5s ease forwards;
+    border-radius: 3px;
+}
+
+@keyframes slideDown{
+    0%{
+        top: -50px;
+        opacity: 1;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar ul li a{
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    padding: 8px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover{
+    color: #98ff98;
+    transform: scale(1.1);
+}
+
+.login-btn {
+    background-color: #ffb07c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease,
+      transform 0.3s ease;
+  }
+
+.login-btn:hover {
+    background-color: #ff8a65;
+    box-shadow: 0 0 15px rgba(255, 138, 101, 0.7);
+    transform: scale(1.05);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  gap: 20px; /* Espacio entre las tarjetas */
+  margin-bottom: 40px;
+}
+
+.grid-item {
+  opacity: 0;
+  transform: translateY(30px); /* Desliza hacia abajo */
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.grid-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.grid-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.grid-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.grid-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.grid-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.grid-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+/*
+.grid-item img:hover {
+  transform: scale(1.05); /* Efecto de agrandado 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}*/
+
+/*hero*/
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font: 1em sans-serif;
+    padding: 60px 30px;/**/
+    /*background-color: rgb(117, 215, 200);*/
+    color: #000000;
+    /*background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.2)
+    );*/
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    /*border-bottom: 4px solid#ffb07c;*/
+  }
+
+  .hero1{
+    font: sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font: 1em sans-serif;
+    padding: 60px 30px;
+    
+  }
+
+  .hero1 h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  }
+
+  .hero1 p{
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+/*buscador*/
+  .search-bar {
+    padding: 12px;
+    width: 350px;
+    border-radius: 20px;
+    border: 2px solid #98ff98; /* Verde menta */
+    box-shadow: 0 0 12px rgba(152, 255, 152, 0.5);
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease, width 0.3s ease;
+  }
+
+  .search-bar:focus {
+    outline: none;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(152, 255, 152, 0.7);
+  }
+/*cursos*/
+  .courses {
+    display: flex;
+    flex-wrap: wrap;
+    /*text-align: center ;
+    flex-direction: column;*/
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background-color: rgb(30, 30, 30);
+    color: white;
+  }
+
+  .courses h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .courses-card{
+    background-color: #1e1f26;
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .courses-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+  .course.image{
+    width: 1000%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10em;
+    margin-bottom: 15px;
+  }
+
+.course-btn {
+    background-color: #ffb07c;  
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    /*position: relative;
+    z-index: 1;*/
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+.course-btn:hover {
+    background-color: #ff8a65;
+    box-shadow: 0 0 20px rgba(255, 0, 102, 0.6);
+    transform: scale(1.05);
+  } 
+  
+.programming-languages{
+  text-align: center;
+}
+
+  .languages {
+    font: 1em sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  
+  .language {
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  
+.language img {
+    width: 90px;
+    height: 90px;
+    filter: drop-shadow(0 0 15px rgba(152, 255, 152, 0.6)); /* Verde menta */
+  }
+  
+  .language:hover {
+    transform: translateY(-10px);
+  }
+  
+  footer {
+    font: 1rem sans-serif;
+    background-color: rgb(1, 1, 32);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 4px solid #ffb07c;
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+}
